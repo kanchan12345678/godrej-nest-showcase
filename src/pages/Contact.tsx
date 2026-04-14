@@ -1,18 +1,7 @@
-import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", phone: "", message: "" });
-  };
-
   return (
     <Layout>
       <section className="py-16">
@@ -20,84 +9,66 @@ const Contact = () => {
           <h1 className="text-4xl font-bold text-center mb-2">Contact Us</h1>
           <p className="text-muted-foreground text-center mb-12">We'd love to hear from you</p>
 
-          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">Name</label>
-                <input
-                  type="text"
-                  required
-                  maxLength={100}
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:ring-2 focus:ring-ring outline-none"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Email</label>
-                <input
-                  type="email"
-                  required
-                  maxLength={255}
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:ring-2 focus:ring-ring outline-none"
-                  placeholder="you@email.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Phone</label>
-                <input
-                  type="tel"
-                  maxLength={15}
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:ring-2 focus:ring-ring outline-none"
-                  placeholder="+91 98765 43210"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Message</label>
-                <textarea
-                  required
-                  maxLength={1000}
-                  rows={4}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:ring-2 focus:ring-ring outline-none resize-none"
-                  placeholder="Tell us what you need..."
-                />
-              </div>
-              <button type="submit" className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover-scale">
-                Send Message
-              </button>
-            </form>
-
+          <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto items-center">
             {/* Info */}
-            <div className="space-y-6">
+            <div className="space-y-8 bg-card p-8 md:p-12 rounded-2xl border border-border shadow-sm h-full">
               <div>
-                <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
-                <div className="space-y-4">
-                  {[
-                    { icon: Phone, label: "+91 98765 43210" },
-                    { icon: Mail, label: "info@9square.in" },
-                    { icon: MapPin, label: "123 Furniture Lane, Mumbai, Maharashtra 400001" },
-                    { icon: Clock, label: "Mon–Sat: 10:00 AM – 8:00 PM" },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-start gap-3">
-                      <item.icon size={20} className="text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{item.label}</span>
+                <h3 className="text-2xl font-semibold mb-8">Contact Information</h3>
+                <div className="space-y-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+                      <Phone size={24} className="text-primary" />
                     </div>
-                  ))}
+                    <div>
+                      <p className="text-sm font-semibold mb-1">Call Us</p>
+                      <span className="text-base text-muted-foreground">+91 79856 07812</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+                      <Mail size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold mb-1">Email Us</p>
+                      <span className="text-base text-muted-foreground">info@9squareindia.com</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+                      <MapPin size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold mb-1">Our Location</p>
+                      <span className="text-base text-muted-foreground">2/436, Vibhav Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full shrink-0">
+                      <Clock size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold mb-1">Working Hours</p>
+                      <span className="text-base text-muted-foreground">Mon–Sat: 10:00 AM – 8:00 PM</span>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Map placeholder */}
-              <div className="bg-secondary rounded-xl h-48 flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">📍 Map — Visit our showroom</span>
-              </div>
+            {/* Map */}
+            <div className="bg-secondary rounded-2xl overflow-hidden h-[500px] shadow-sm border border-border">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56946.716451765715!2d80.94344784863281!3d26.866346500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3121336d167%3A0x267c8ff263952dc0!2s9%20Square%20Godrej%20Interio%20Furniture%20Office%20Furniture%20Modular%20Kitchen%20Luxury%20furniture%20Locker%20Safe%20Sofa%20Dining%20Bed%20chair%20table!5e0!3m2!1sen!2sin!4v1776144326952!5m2!1sen!2sin"   
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
