@@ -6,9 +6,9 @@ import { ArrowRight, Award, Truck, ShieldCheck, Wrench } from "lucide-react";
 const featuredProducts = products.filter((_, i) => [0, 6, 12, 18].includes(i));
 
 const clientNames = [
-  "Tata Consultancy", "Wipro Technologies", "Infosys Ltd", "Reliance Industries",
-  "HDFC Bank", "State Bank of India", "Mahindra Group", "Larsen & Toubro",
-  "Bajaj Auto", "Godrej Properties", "Hindustan Unilever", "ITC Limited",
+  "AIIMS Raibariely", "IOCL", "BPCL", "HPCL", "UP PWD", "UPRNN", "CPWD", "NABARD",
+  "LOHIA GROUP", "AERO ALLOY", "TATA", "LDA", "C&DS", "UPSIDCO", "AWAS VIKAS",
+  "HAL", "POWER GRID", "NTPC", "GAIL"
 ];
 
 const Index = () => (
@@ -34,10 +34,10 @@ const Index = () => (
           </div>
         </div>
         <div className="flex-1 grid grid-cols-2 gap-3">
-          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Modern sofa" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover" />
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80" alt="Office space" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover mt-8" />
-          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&q=80" alt="Modern interior" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover" />
-          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Kitchen" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover mt-8" />
+          <img src="/sofa1.png" alt="Modern sofa" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover" />
+          <img src="/4_Seater_Dining.webp" alt="Office space" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover mt-8" />
+          <img src="/locker_1.webp" alt="Modern interior" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover" />
+          <img src="/Cross_Full_Back.webp" alt="Kitchen" className="rounded-xl shadow-lg hover-scale w-full h-40 object-cover mt-8" />
         </div>
       </div>
     </section>
