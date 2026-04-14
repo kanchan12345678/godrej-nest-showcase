@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { categories, products } from "@/data/products";
+import { clients } from "@/data/clients"; // Import clients data
 import { ArrowRight, Award, Truck, ShieldCheck, Wrench } from "lucide-react";
 
 const featuredProducts = products.filter((_, i) => [0, 6, 12, 18].includes(i));
-
-const clientNames = [
-  "AIIMS Raibariely", "IOCL", "BPCL", "HPCL", "UP PWD", "UPRNN", "CPWD", "NABARD",
-  "LOHIA GROUP", "AERO ALLOY", "TATA", "LDA", "C&DS", "UPSIDCO", "AWAS VIKAS",
-  "HAL", "POWER GRID", "NTPC", "GAIL"
-];
 
 const Index = () => (
   <Layout>
@@ -115,9 +110,10 @@ const Index = () => (
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-center mb-8">Trusted By Leading Brands</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {clientNames.map((name, i) => (
-            <div key={i} className="flex items-center justify-center p-4 bg-secondary rounded-lg border border-border/50 hover:border-primary/20 transition-colors shadow-sm">
-              <span className="text-sm font-medium text-center text-muted-foreground">{name}</span>
+          {clients.map((client) => (
+            <div key={client.id} className="flex flex-col items-center justify-center p-4 bg-secondary rounded-lg border border-border/50 hover:border-primary/20 transition-colors shadow-sm h-32">
+              <img src={client.logo} alt={client.name} className="max-h-16 object-contain mb-2" />
+              <span className="text-sm font-medium text-center text-muted-foreground line-clamp-1">{client.name}</span>
             </div>
           ))}
         </div>
