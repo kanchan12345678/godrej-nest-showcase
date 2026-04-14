@@ -110,15 +110,17 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Client Marquee */}
-    <section className="py-12 overflow-hidden border-y border-border">
-      <h2 className="text-2xl font-bold text-center mb-8">Trusted By Leading Brands</h2>
-      <div className="flex whitespace-nowrap animate-marquee">
-        {[...clientNames, ...clientNames].map((name, i) => (
-          <div key={i} className="inline-flex items-center justify-center mx-8 px-6 py-3 bg-secondary rounded-lg min-w-[180px]">
-            <span className="text-sm font-medium text-muted-foreground">{name}</span>
-          </div>
-        ))}
+    {/* Client Grid */}
+    <section className="py-16 bg-card border-y border-border">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl font-bold text-center mb-8">Trusted By Leading Brands</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {clientNames.map((name, i) => (
+            <div key={i} className="flex items-center justify-center p-4 bg-secondary rounded-lg border border-border/50 hover:border-primary/20 transition-colors shadow-sm">
+              <span className="text-sm font-medium text-center text-muted-foreground">{name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   </Layout>
