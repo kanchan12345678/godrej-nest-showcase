@@ -1,4 +1,4 @@
-export type ProductCategory = "office" | "home" | "storage" | "godrej-storage";
+export type ProductCategory = "office" | "home" | "storage" | "godrej-storage" | "laboratory" | "medical" | "education";
 
 export interface Product {
   id: string;
@@ -13,6 +13,9 @@ export const categories = [
   { id: "home" as const, label: "Home Furniture", icon: "🏠" },
   { id: "storage" as const, label: "Storage Solutions", icon: "📦" },
   { id: "godrej-storage" as const, label: "Godrej Security", icon: "🔐" },
+  { id: "laboratory" as const, label: "Laboratory Solutions", icon: "🔬" },
+  { id: "medical" as const, label: "Medical Solutions", icon: "🏥" },
+  { id: "education" as const, label: "Educational Furniture", icon: "🏫" },
 ];
 
 export const products: Product[] = [
@@ -47,4 +50,21 @@ export const products: Product[] = [
   { id: "g4", name: "Godrej Security Locker", description: "Premium security locker providing certified protection against theft with a sleek and modern design.", category: "godrej-storage", image: "/locker_1.webp" },
   { id: "g5", name: "Vault Safe", description: "Professional-grade high-security vault for maximum protection of large-scale valuables and documents.", category: "godrej-storage", image: "/locker_2.jpg" },
   { id: "g6", name: "Armored Locker", description: "Maximum security storage unit with armored plating and sophisticated locking systems for high-risk environments.", category: "godrej-storage", image: "/locker_3.webp" },
+
+  // Education
+  { id: "e1", name: "Ergonomic Study Chair", description: "Comfortable and adjustable chair designed for long study sessions, promoting good posture for students.", category: "education", image: "/edu_chair_1.webp" },
+  { id: "e2", name: "Classroom Chair with Tablet", description: "Durable classroom chair with an integrated writing tablet, ideal for lectures and active learning environments.", category: "education", image: "/edu_chair_2.webp" },
+  { id: "e3", name: "Student Task Chair", description: "Versatile and robust chair suitable for various educational settings, offering support and flexibility.", category: "education", image: "/edu_chair_3.webp" },
+  { id: "e4", name: "Modular Classroom Table", description: "Flexible and sturdy table designed for collaborative learning, easily reconfigured for different classroom activities.", category: "education", image: "/edu_table_4.webp" },
+
+  // Laboratory
+  { id: "l1", name: "Laboratory Workstation", description: "Robust and chemical-resistant workstation designed for scientific research and experiments, with ample space for equipment.", category: "laboratory", image: "/lab1.webp" },
+  { id: "l2", name: "Laboratory Storage Cabinet", description: "Secure and organized storage solution for laboratory reagents and equipment, featuring specialized compartments.", category: "laboratory", image: "/lab2.webp" },
+  { id: "l3", name: "Lab Stool with Backrest", description: "Ergonomic and adjustable stool with backrest for comfortable and long hours of work in laboratory settings.", category: "laboratory", image: "/lab3.webp" },
+
+  // Medical
+  { id: "m1", name: "Adjustable Medical Bed", description: "Multi-functional hospital bed with electronic adjustments for patient comfort and care.", category: "medical", image: "/med_bed_1.webp" },
+  { id: "m2", name: "Patient Recovery Bed", description: "Comfort-focused bed designed for long-term patient recovery, featuring pressure-relieving mattress and safety rails.", category: "medical", image: "/med_bed_3.webp" },
+  { id: "m3", name: "Examination Couch", description: "Sturdy and hygienic couch for medical examinations, essential for clinics and healthcare facilities.", category: "medical", image: "/med_bed_4.webp" },
+  { id: "m4", name: "Medical Waiting Area Chair", description: "Durable and easy-to-clean seating solution for hospital waiting areas, designed for comfort and high traffic.", category: "medical", image: "/med_seat_2.webp" },
 ];
