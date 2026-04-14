@@ -19,7 +19,7 @@ const Index = () => (
         <div className="flex-1 animate-fade-up">
           <p className="text-primary font-semibold mb-2 tracking-wide uppercase text-sm">Authorized Godrej Interio Dealer</p>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">
-            Square <span className="text-primary">Your Life</span>
+            Square Your Life
           </h1>
           <p className="text-muted-foreground text-lg mb-8 max-w-lg">
             Premium furniture solutions for your home, office, and business. Trusted quality from Godrej Interio, delivered by 9 Square.
