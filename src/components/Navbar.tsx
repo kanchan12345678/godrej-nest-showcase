@@ -18,8 +18,9 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur border-b border-border shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-primary">9</span>
-          <span className="text-2xl font-bold text-foreground">Square</span>
+          {/* // <span className="text-2xl font-bold text-primary">9</span> */}
+          {/* // <span className="text-2xl font-bold text-foreground">Square</span> */}
+          <img src="/logo.png" className="h-16"/>
           <span className="hidden sm:inline text-xs text-muted-foreground ml-1 border-l border-border pl-2">
             Authorized Godrej Interio Dealer
           </span>
