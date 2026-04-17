@@ -41,7 +41,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="border-t border-background/10 text-center py-4 text-xs text-background/50">
-      © {new Date().getFullYear()} 9 Square. All rights reserved. | Authorized Godrej Interio Dealer
+      © {new Date().getFullYear()} 9 Square. All rights reserved. Made by Shivanshu Prajapati
     </div>
   </footer>
 );
